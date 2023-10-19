@@ -5,5 +5,4 @@ $header = [
     'sobre',
     'cátalogo',
     'contato',
-
 ];

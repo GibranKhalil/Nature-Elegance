@@ -1,6 +1,6 @@
 <?php
-include_once("../data/navbar.php");
-include_once("../syles.php");
+include_once("./styles.php");
+include_once("./data/posts.php");
 ?>
 
 <!DOCTYPE html>
@@ -13,18 +13,24 @@ include_once("../syles.php");
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
     <header>
         <nav id="navbar">
             <a id="logo" href="index.php">
-                <img src="../img/OIG.jfif">
+                <img src="./img/OIG.jfif">
             </a>
             <ul id="navlist">
                 <?php foreach ($header as $link) : ?>
                     <a class="navlist-item" href="#"><?= $link ?></a>
                 <?php endforeach; ?>
+
             </ul>
+            <div id="button-nav">
+                <a href="./login.php"><button><i class="material-icons">account_circle</i>Entrar</button></a>
+                <a href="./register.php"><button><i class="material-icons">login</i>Cadastrar</button></a>
+            </div>
         </nav>
     </header>
