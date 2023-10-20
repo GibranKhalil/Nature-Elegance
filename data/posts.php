@@ -7,9 +7,54 @@ $header = [
     'contato',
 ];
 
-$feminino = [
+$categorias =[
     [
         'id' => 1,
+        'img' => "",
+        'nome' => "Vestidos",
+    ],
+    [
+        'id' => 2,
+        'img' => "",
+        'nome' => "Moletons",
+    ],
+    [
+        'id' => 3,
+        'img' => "",
+        'nome' => "Polos",
+    ],
+    [
+        'id' => 4,
+        'img' => "",
+        'nome' => "Shorts",
+    ],
+    [
+        'id' => 5,
+        'img' => "",
+        'nome' => "Fit",
+    ],
+    [
+        'id' => 6,
+        'img' => "",
+        'nome' => "Calças",
+    ],
+    [
+        'id' => 7,
+        'img' => "",
+        'nome' => "Camisas",
+    ],
+    [
+        'id' => 8,
+        'img' => "",
+        'nome' => "Tênis",
+    ],
+
+];
+
+$destaques = [
+    [
+        'id' => 1,
+        'img' => "",
         'nome' => "Vestido Maxi de Seda de Tucum",
         'desc' => "Este vestido maxi é feito de tucum, uma fibra natural e sustentável. Além de ser luxuoso, é uma escolha ecologicamente correta para ocasiões especiais.",
         'preco' => "$ 99,99",
@@ -18,6 +63,7 @@ $feminino = [
     ],
     [
         'id' => 2,
+        'img' => "",
         'nome' => "Moletom com Capuz de Garrafas PET Recicladas",
         'desc' => "Este moletom com capuz é feito a partir de garrafas PET recicladas, proporcionando um toque macio e quente. Mantenha-se aconchegante e com consciência ecológica.",
         'preco' => "$ 59,99",
@@ -34,6 +80,7 @@ $feminino = [
     ],
     [
         'id' => 4,
+        'img' => "",
         'nome' => "Shorts de Banho Reciclados",
         'desc' => "Nossos shorts de banho são feitos a partir de materiais reciclados, ajudando a combater a poluição dos oceanos. São ideais para dias de diversão na água.",
         'preco' => "$ 34,99",
@@ -42,6 +89,7 @@ $feminino = [
     ],
     [
         'id' => 5,
+        'img' => "",
         'nome' => "Vestuário para Yoga de Poliéster Reciclado",
         'desc' => "Desfrute do seu tempo de yoga com uma consciência limpa. Nosso vestuário para yoga é feito de poliéster reciclado, oferecendo flexibilidade e sustentabilidade.",
         'preco' => "$ 39,99",
@@ -50,17 +98,16 @@ $feminino = [
     ],
     [
         'id' => 6,
+        'img' => "",
         'nome' => "Vestido de Algodão Orgânico",
         'desc' => "Este vestido é confeccionado com algodão orgânico de alta qualidade, proporcionando um toque suave e confortável. Uma escolha elegante e ecológica para diversas ocasiões.",
         'preco' => "$ 64,99",
         'desconto' => "50%",
         'precoDesconto' => "$ 32,49",
     ],
-];
-
-$masculino = [
     [
-        'id' => 1,
+        'id' => 7,
+        'img' => "",
         'nome' => "Camiseta de Algodão Orgânico Unissex",
         'desc' => "Esta camiseta é feita com algodão orgânico de alta qualidade, cultivado sem o uso de produtos químicos prejudiciais ao meio ambiente. É uma escolha sustentável e confortável para o seu guarda-roupa casual.",
         'preco' => "$ 29,99",
@@ -68,7 +115,8 @@ $masculino = [
         'precoDesconto' => "$ 20,99",
     ],
     [
-        'id' => 2,
+        'id' => 8,
+        'img' => "",
         'nome' => "Jaqueta de Fibra Reciclada",
         'desc' => "Esta jaqueta é feita a partir de materiais reciclados, ajudando a reduzir o desperdício de plástico. Mantenha-se aquecido e ao mesmo tempo cuide do planeta com esta escolha sustentável.",
         'preco' => "$ 69,99",
@@ -76,7 +124,8 @@ $masculino = [
         'precoDesconto' => "$ 48,99",
     ],
     [
-        'id' => 3,
+        'id' => 9,
+        'img' => "",
         'nome' => "Calça Jeans Orgânica Slim Fit",
         'desc' => "Feita com algodão orgânico cultivado de forma responsável, esta calça jeans oferece estilo e conforto, sem comprometer o meio ambiente.",
         'preco' => "$ 79,99",
@@ -84,7 +133,8 @@ $masculino = [
         'precoDesconto' => "$ 59,99",
     ],
     [
-        'id' => 4,
+        'id' => 10,
+        'img' => "",
         'nome' => "Blusa de Algodão e Bambu",
         'desc' => "A combinação de algodão orgânico e bambu torna esta blusa uma opção incrivelmente suave e sustentável. O bambu é uma planta de crescimento rápido e amigo do ambiente.",
         'preco' => "$ 44,99",
@@ -92,7 +142,8 @@ $masculino = [
         'precoDesconto' => "$ 33,75",
     ],
     [
-        'id' => 5,
+        'id' => 11,
+        'img' => "",
         'nome' => "Casaco Corta-vento de Poliéster Reciclado",
         'desc' => "Este casaco é perfeito para protegê-lo contra o vento e a chuva. É produzido com poliéster reciclado, ajudando a reduzir a pegada de carbono.",
         'preco' => "$  69,99",
@@ -100,7 +151,8 @@ $masculino = [
         'precoDesconto' => "$ 48,99",
     ],
     [
-        'id' => 6,
+        'id' => 12,
+        'img' => "",
         'nome' => "Blusa Polo de Algodão Orgânico",
         'desc' => "Esta blusa polo é produzida com algodão orgânico de alta qualidade, oferecendo estilo e conforto. Uma opção casual e sustentável para o seu guarda-roupa.",
         'preco' => "$ 44,99",
@@ -108,7 +160,8 @@ $masculino = [
         'precoDesconto' => "$ 29,99",
     ],
     [
-        'id' => 7,
+        'id' => 13,
+        'img' => "",
         'nome' => "Tênis EcoFit Pro",
         'desc' => "O Tênis EcoFit Pro é um exemplo perfeito de moda ecológica que combina estilo, conforto e responsabilidade ambiental. Cada elemento deste tênis foi cuidadosamente projetado para minimizar o impacto ambiental e promover a sustentabilidade.",
         'preco' => "$ 80,00",
@@ -116,3 +169,4 @@ $masculino = [
         'precoDesconto' => "R$ 59,99",
     ],
 ];
+
