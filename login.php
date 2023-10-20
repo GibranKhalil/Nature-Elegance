@@ -9,7 +9,7 @@ include_once("styles.php");
         </div>
         <div id="form-container">
             <div id="form-title">
-                <img src="img/OIG.jfif">
+                <img src="img/logo.png">
                 <h1>Bem-vindo de volta</h1>
                 <p>Por favor preencha suas informações</p>
             </div>

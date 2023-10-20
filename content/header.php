@@ -20,7 +20,7 @@ include_once("./data/posts.php");
     <header>
         <nav id="navbar">
             <a id="logo" href="index.php">
-                <img src="./img/OIG.jfif">
+                <img src="./img/logo.png">
             </a>
             <ul id="navlist">
                 <?php foreach ($header as $link) : ?>

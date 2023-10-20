@@ -6,7 +6,33 @@
         margin: 0;
     }
 
+    main{
+        margin-bottom: 200px;
+    }
 
+    #index-container {
+        min-height: 100vh;
+        min-width: 100%;
+    }
+
+    #banner-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+
+    }
+
+    #banner-img {
+        width: 80%;
+        height: auto;
+        padding: 150px;
+        border-radius: 20px;
+        background-image: url('img/Banner.png');
+        background-size: cover;
+        background-position: center;
+    }
 
 
     #navbar #logo {
@@ -44,12 +70,13 @@
         gap: 10px;
         position: absolute;
         right: 2.5%;
-        
+
     }
 
-    #button-nav a{
+    #button-nav a {
         text-decoration: none;
     }
+
     #button-nav button {
         background-color: #fff;
         color: #000;
@@ -77,11 +104,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #E0E0E0;
+        background-image: url('img/test1.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
 
     }
 
     #login-container {
+        margin: 50px 0;
         width: 80%;
         height: 720px;
         display: flex;
@@ -194,29 +225,87 @@
         background-color: #FFC800;
     }
 
-    #redirect{
-        position: absolute;
-        bottom: 10%;
-        right: 16%;
+    #redirect {
+        text-align: center;
+        margin: 20px 0;
     }
 
-    #redirect a{
+    #redirect a {
         color: #000;
         font-weight: 600;
         text-decoration: none;
         transition: color 0.3s;
     }
 
-    #redirect a:hover{
+    #redirect a:hover {
         color: #6d6d6d;
     }
-    
-    /*INDEX*/
-        summary {
-            background-color: #3498db;
-            color: #fff;
-            padding: 10px;
-            cursor: pointer;
-        }
 
+    /*INDEX*/
+
+
+    #cards-container{
+        width: 100%;
+    }
+
+    .cards{
+        width: 300px;
+        height: auto;
+        min-height: 330px;
+        background-color: #f2f2f2;
+        overflow: hidden;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .cards img{
+        width: 100%;
+        transition:  0.3s;
+    }
+
+    .cards img:hover{
+        transform: scale(1.1);
+    }
+
+    .cards h1{
+        font-size: 22px;
+        margin: 10px 20px;
+    }
+
+    .cards p del{
+        font-size: 14px;
+    }
+
+    .cards #price{
+        font-size: 18px;
+        color: #000;
+        font-weight: 600;
+    }
+
+    .cards p{
+        margin: 0px 20px;
+    }
+
+    .desconto{
+        width: 100%;
+        background-color: #4CAF50;
+        opacity: 70%;
+        text-align: center;
+    }
+
+    .desconto p{
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    /*FOOTER*/
+
+    footer{
+        padding: 25px;
+        width: 100%;
+        color: #fff;
+        background-color: #228B22;
+        text-align: center;
+    }
 </style>
