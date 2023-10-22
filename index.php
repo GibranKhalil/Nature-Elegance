@@ -1,12 +1,11 @@
 <?php
 include_once("content/header.php");
-include_once("styles.php");
 ?>
 
 <main>
     <div id="index-container">
         <div id="banner-container">
-            <div id="banner-img">
+        <div style="width: 80%; height: auto;padding: 150px;border-radius: 20px;background-image: url('<?= $BASE_URL ?>/img/Banner.png');background-size: cover;background-position: center;">
             </div>
         </div>
         <div id="categorias-title">
@@ -16,7 +15,7 @@ include_once("styles.php");
             <?php foreach ($categorias as $cat) : ?>
                 <div id="categorias--circle-container">
                     <div class="categorias-circle">
-                        <img src="img/tenis.png">
+                        <img src="<?= $BASE_URL?>/img/<?= $cat['img']?>">
                     </div>
                     <div class="categorias-cirlce-title">
                         <p><?= $cat['nome']; ?></p>
@@ -25,17 +24,17 @@ include_once("styles.php");
             <?php endforeach; ?>
         </div>
         <div id="cards-container">
-            <?php for ($i = 0; $i <= 9; $i++) : ?>
+            <?php foreach($destaques as $dest) : ?>
                 <div class="cards">
-                    <img src="img/tenis.png">
+                    <a href="<?= $BASE_URL?>produto.php?id=<?= $dest['id']?>"><img src="<?= $BASE_URL?>/img/<?= $dest['img']?>"></a>
                     <div class="desconto">
-                        <p>-75% OFF</p>
+                        <p>-<?= $dest['desconto']?> OFF</p>
                     </div>
-                    <h1>Tênis EcoFit Pro</h1>
-                    <p><del>R$ 80,00</del></p>
-                    <p id="price">R$ 59,99</p>
+                    <h1><?= $dest['nome']?></h1>
+                    <p><del><?= $dest['preco']?></del></p>
+                    <p id="price"><?= $dest['precoDesconto']?></p>
                 </div>
-            <?php endfor; ?>
+            <?php endforeach; ?>
         </div>
     </div>
 </main>

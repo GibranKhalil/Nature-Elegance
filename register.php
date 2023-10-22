@@ -1,9 +1,8 @@
 <?php
 include_once("content/header.php");
-include_once("styles.php");
 ?>
 
-<div id="content-login">
+<div style="width: 100%;min-height: 100vh;display: flex;align-items: center;justify-content: center;background-image: url('img/test1.png');background-size: cover;background-position: center; background-repeat: no-repeat;">
     <div id="login-container">
         <div id="img-container">
             <img src="img/folha.jfif">
