@@ -227,9 +227,13 @@ main {
     justify-content: center;
 }
 
-#cards-container {
+
+#geral-cards {
     width: 100%;
     height: 100%;
+}
+
+#cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -239,8 +243,8 @@ main {
 .cards {
     margin: 10px 10px;
     width: 20%;
-    min-height: 460px;
-    max-height: 480px;
+    min-height: 520px;
+    max-height: 600px;
     background-color: #f2f2f2;
     overflow: hidden;
     border-top-left-radius: 10px;
@@ -289,10 +293,14 @@ main {
     font-weight: 600;
 }
 
-#categorias {
-    margin: 40px 0;
-    padding: 40px 0;
+#categorias-container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#categorias {
+    padding: 40px 0;
     height: auto;
     display: flex;
     flex-wrap: wrap;
@@ -301,10 +309,22 @@ main {
 
 }
 
-#categorias-title {
-    text-align: center;
-    margin: 10px 0;
+.indexsection-title {
+    text-align: left;
+    margin: 5px 4%;
 }
+
+.indexsection-title a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #000;
+}
+
+.indexsection-title a:hover {
+    text-decoration: underline;
+}
+
+
 
 #categorias--circle-container {
     flex-grow: 1;
@@ -337,7 +357,7 @@ main {
 
 /*Produtos*/
 
-#marca-container{
+#marca-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -345,7 +365,7 @@ main {
     top: 0%;
 }
 
-#marca-container #logo-produto{
+#marca-container #logo-produto {
     width: 60px;
     height: 60px;
 }
@@ -405,7 +425,7 @@ main {
     cursor: pointer;
 }
 
-#desc-container{
+#desc-container {
     width: 50%;
 }
 
@@ -419,29 +439,29 @@ main {
     margin: 5% 0;
 }
 
-#color-title{
+#color-title {
     margin: 5% 0;
     font-weight: 600;
     color: #000;
 }
 
 
-#color-list{
+#color-list {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 20px;
 }
 
-.color-text{ 
+.color-text {
     border-radius: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
-    list-style: none; 
+    list-style: none;
 }
 
-.color-text button{
+.color-text button {
     width: 100%;
     border-radius: 70px;
     height: 100%;
@@ -462,20 +482,20 @@ main {
     margin: 2% 0;
 }
 
-#size-list{
+#size-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.size-text{
+.size-text {
     text-align: center;
     list-style: none;
     margin: 10px 5px;
     width: 20%;
 }
 
-.size-text button{
+.size-text button {
     width: 100%;
     height: 100%;
     padding: 10px 10px;
@@ -489,7 +509,7 @@ main {
 
 
 
-.size-text button:hover{
+.size-text button:hover {
     background-color: #e4e4e4;
 }
 
@@ -540,20 +560,20 @@ main {
 
 /*Catalogo*/
 
-#catalogo-container{
+#catalogo-container {
     display: grid;
     grid-template-columns: 20% 80%;
-    grid-template-rows:auto;
+    grid-template-rows: auto;
     grid-template-areas: "sidebar main";
 }
 
-#sidebar-catalogo{
+#sidebar-catalogo {
     display: flex;
     flex-direction: column;
     background-color: #f2f2f2;
 }
 
-#sidebar-catalogo .text-container{
+#sidebar-catalogo .text-container {
     margin: 10px 10px;
     background-color: #fff;
     display: flex;
@@ -562,47 +582,49 @@ main {
     overflow: scroll;
 }
 
-.text-container::-webkit-scrollbar{
+.text-container::-webkit-scrollbar {
     width: 8px;
     height: 100%;
 }
 
-.text-container::-webkit-scrollbar-thumb{
-    background: #cccccc; /* Cor do "polegar" da barra de rolagem */
-    border-radius: 4px; /* Borda arredondada do "polegar" */
+.text-container::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    /* Cor do "polegar" da barra de rolagem */
+    border-radius: 4px;
+    /* Borda arredondada do "polegar" */
 }
 
-.text-container::-webkit-scrollbar-button{
+.text-container::-webkit-scrollbar-button {
     display: none;
 }
 
-.text-container .text-title{
+.text-container .text-title {
     padding: 10px 0;
     width: 100%;
     position: relative;
 }
 
-.text-container .text-title p{
+.text-container .text-title p {
     margin: 0px 10px;
     color: #000;
     font-weight: 500;
 }
 
-.field-content{
+.field-content {
     display: flex;
     flex-direction: column;
 }
 
-.field-content input{
+.field-content input {
     margin: 8px 10px;
 }
 
-#preco-rate{
+#preco-rate {
     display: flex;
     text-align: center;
 }
 
-#preco-rate input{
+#preco-rate input {
     width: 50%;
     text-indent: 10px;
     height: 60%;
