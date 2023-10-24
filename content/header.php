@@ -23,13 +23,13 @@ include_once("data/url.php");
             <a id="logo" href="<?=$BASE_URL?>index.php">
                 <img src="<?=$BASE_URL?>img/logo.png">
             </a>
-            <ul id="navlist">
+            <ul id="navlist" class="hide">
                 <?php foreach ($header as $title => $link) : ?>
                     <a class="navlist-item" href="<?= $BASE_URL?><?= $link?>"><?= $title ?></a>
                 <?php endforeach; ?>
 
             </ul>
-            <div id="button-nav">
+            <div id="button-nav" class="hide">
             <a href="<?= $BASE_URL ?>login.php"><button><i class="material-icons">account_circle</i>Entrar</button></a> 
             <a href="<?= $BASE_URL ?>register.php"><button><i class="material-icons">login</i>Cadastrar</button></a>            </div>
         </nav>
