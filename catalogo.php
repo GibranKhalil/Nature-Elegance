@@ -50,13 +50,16 @@ include_once("content/header.php");
     <div id="cards-container">
         <?php foreach ($catalogo as $produto) : ?>
             <div class="cards">
-                <a href="<?= $BASE_URL ?>produto.php?id=<?= $produto['id'] ?>"><img src="<?= $BASE_URL ?>/img/<?= $produto['img'] ?>"></a>
                 <div class="desconto">
+                <a href="<?= $BASE_URL ?>produto.php?id=<?= $produto['id'] ?>"><img src="<?= $BASE_URL ?>/img/<?= $produto['img'] ?>"></a>
                     <p>-<?= $produto['desconto'] ?> OFF</p>
                 </div>
+                <div class="desc">
                 <h1><?= $produto['nome'] ?></h1>
                 <p><del><?= $produto['preco'] ?></del></p>
                 <p id="price"><?= $produto['precoDesconto'] ?></p>
+                </div>
+                
             </div>
         <?php endforeach; ?>
     </div>
