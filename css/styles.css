@@ -133,7 +133,7 @@ main {
 }
 
 #form-title h1 {
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 #form-title p {
@@ -744,10 +744,6 @@ footer {
         justify-content: center;
         margin: 10px 20px;
         width: 100%;
-    }
-
-    #catalogo-container .cards .desconto {
-        
     }
 
     #catalogo-container .desc {

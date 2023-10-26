@@ -12,13 +12,13 @@ include_once("content/header.php");
                 <h1>Bem-vindo de volta</h1>
                 <p>Por favor preencha suas informações</p>
             </div>
-            <form id="form-login">
+            <form action="<?= $BASE_URL?>db/logindb.php" method="POST" id="form-login">
                 <div class="form-elements">
                     <div class="label-icon">
                         <i class="material-icons">account_circle</i>
                         <label for="nome">Usuário:</label>
                     </div>
-                    <input type="text" name="nome" placeholder="Digite seu usuário">
+                    <input type="text" name="usuario" placeholder="Digite seu usuário">
                 </div>
                 <div class="form-elements">
                     <div class="label-icon">
