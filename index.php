@@ -16,7 +16,7 @@ include_once("content/header.php");
                 <?php foreach ($categorias as $cat) : ?>
                     <div id="categorias--circle-container">
                         <div class="categorias-circle">
-                            <img src="<?= $BASE_URL ?>/img/<?= $cat['img'] ?>">
+                            <img src="<?= $BASE_URL ?>img/<?= $cat['img'] ?>">
                         </div>
                         <div class="categorias-cirlce-title">
                             <p><?= $cat['nome']; ?></p>
@@ -32,7 +32,7 @@ include_once("content/header.php");
             <div id="cards-container">
             <?php foreach ($destaques as $dest) : ?>
                 <div class="cards">
-                    <a href="<?= $BASE_URL ?>produto.php?id=<?= $dest['id'] ?>"><img src="<?= $BASE_URL ?>/img/<?= $dest['img'] ?>"></a>
+                    <a href="<?= $BASE_URL ?>produto.php?id=<?= $dest['id'] ?>"><img src="<?= $BASE_URL ?>img/<?= $dest['img'] ?>"></a>
                     <div class="desconto">
                         <p>-<?= $dest['desconto'] ?> OFF</p>
                     </div>

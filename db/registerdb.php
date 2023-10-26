@@ -20,4 +20,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $stmt->execute();
 
     }
+
+    header("Location: " . $BASE_URL . "../login.php");
 }

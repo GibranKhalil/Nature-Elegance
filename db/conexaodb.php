@@ -1,5 +1,5 @@
 <?php
-
+include_once("../data/url.php");
 
 $host = "localhost";
 $user = "root";

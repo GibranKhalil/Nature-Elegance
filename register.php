@@ -13,34 +13,34 @@ include_once("content/header.php");
                 <h1>Cadastre-se</h1>
                 <p>Por favor preencha suas informações</p>
             </div>
-            <form action="<?=$BASE_URL?>db/registerdb.php" method="POST" id="form-login">
+            <form action="<?=$BASE_URL?>db/registerdb.php" method="POST" id="form-login" required>
                 <div class="form-elements">
                     <div class="label-icon">
                         <i class="material-icons">account_circle</i>
                         <label for="nome">Usuário:</label>
                     </div>
-                    <input type="text" name="usuario" placeholder="Digite seu usuário">
+                    <input type="text" name="usuario" placeholder="Digite seu usuário" required>
                 </div>
                 <div class="form-elements">
                     <div class="label-icon">
                         <i class="material-icons">email</i>
                         <label for="email">E-mail:</label>
                     </div>
-                    <input type="email" name="email" placeholder="Digite seu e-mail">
+                    <input type="email" name="email" placeholder="Digite seu e-mail" required>
                 </div>
                 <div class="form-elements">
                     <div class="label-icon">
                         <i class="material-icons">lock</i>
                         <label for="senha">Senha:</label>
                     </div>
-                    <input type="password" name="senha" placeholder="Digite sua senha">
+                    <input type="password" name="senha" placeholder="Digite sua senha" required>
                 </div>
                 <div class="form-elements">
                     <div class="label-icon">
                         <i class="material-icons">lock</i>
                         <label for="confimre">Confirme sua senha:</label>
                     </div>
-                    <input type="password" name="confirme" placeholder="Confirme sua senha">
+                    <input type="password" name="confirme" placeholder="Confirme sua senha" required>
                 </div>
                 <div class="form-elements">
                     <button>Registrar</button>
