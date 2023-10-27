@@ -1,4 +1,5 @@
 <?php
+//Criar classe
 include_once("../data/url.php");
 
 $host = "localhost";

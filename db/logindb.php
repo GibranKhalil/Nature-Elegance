@@ -1,15 +1,12 @@
 <?php
-
+//Criar classe
 session_start();
-
 include_once("conexaodb.php");
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST["usuario"];
     $senha = $_POST["senha"];
-
-    
 
     $stmt = $con->prepare("SELECT usuario,senha FROM usuario WHERE usuario=:usuario AND senha=:senha ");
 

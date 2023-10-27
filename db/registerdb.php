@@ -1,5 +1,6 @@
 <?php
 
+//Criar classe
 include_once("conexaodb.php");
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
