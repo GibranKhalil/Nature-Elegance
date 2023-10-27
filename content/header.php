@@ -1,6 +1,13 @@
 <?php
 include_once("data/posts.php");
 include_once("data/url.php");
+
+session_start();
+
+if(isset($_SESSION['usuario'])){
+    $userName = $_SESSION['usuario'];
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +37,16 @@ include_once("data/url.php");
 
             </ul>
             <div id="button-nav">
-            <a href="<?= $BASE_URL ?>login.php"><button><i class="material-icons">account_circle</i><p>Entrar</p></button></a> 
-            <a href="<?= $BASE_URL ?>register.php"><button><i class="material-icons">login</i><p>Cadastrar</p></button></a>            </div>
+                <?php if(isset($userName)) :?>
+                    <p class="userName"><i class="material-icons">person</i><span><?=$userName;?></span></p>
+                    <form action="<?=$BASE_URL?>db/logoutdb.php">
+                    <p class="userName"><button><i class="material-icons">logout</i>Sair</button></p>
+                    </form>
+
+                <?php else:?>
+                    <a href="<?= $BASE_URL ?>login.php"><button><i class="material-icons">account_circle</i><p>Entrar</p></button></a> 
+                    <a href="<?= $BASE_URL ?>register.php"><button><i class="material-icons">login</i><p>Cadastrar</p></button></a>            
+                <?php endif;?>
+            </div>
         </nav>
     </header>

@@ -17,9 +17,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $stmt->bindParam(":email", $email);
         $stmt->bindParam(":senha", $senha);
 
-        $stmt->execute();
-
+        try {
+            $stmt->execute();
+            header("Location: " . $BASE_URL . "../login.php");
+        } catch (PDOException $e) {
+            $error = $e->getMessage();
+            echo "Erro: $error";
+        }        $stmt->execute();
+        header("Location: " . $BASE_URL . "../login.php");
     }
-
-    header("Location: " . $BASE_URL . "../login.php");
 }

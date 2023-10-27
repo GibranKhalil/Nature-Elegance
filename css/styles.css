@@ -54,6 +54,13 @@ main {
     width: 80px;
 }
 
+.userName{
+    display: flex;
+    align-items: center;
+}
+
+
+
 #button-nav {
     display: flex;
     gap: 10px;
