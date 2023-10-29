@@ -56,8 +56,8 @@ include_once("content/header.php");
                 </div>
                 <div class="desc">
                 <h1><?= $produto['nome'] ?></h1>
-                <p><del><?= $produto['preco'] ?></del></p>
-                <p id="price"><?= $produto['precoDesconto'] ?></p>
+                <p><del>R$<?= $produto['preco'] ?></del></p>
+                <p id="price">R$<?= $produto['precoDesconto'] ?></p>
                 </div>
                 
             </div>

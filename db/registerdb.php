@@ -24,7 +24,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         } catch (PDOException $e) {
             $error = $e->getMessage();
             echo "Erro: $error";
-        }        $stmt->execute();
-        header("Location: " . $BASE_URL . "../login.php");
+        }
     }
 }

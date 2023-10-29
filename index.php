@@ -37,8 +37,8 @@ include_once("content/header.php");
                         <p>-<?= $dest['desconto'] ?> OFF</p>
                     </div>
                     <h1><?= $dest['nome'] ?></h1>
-                    <p><del><?= $dest['preco'] ?></del></p>
-                    <p id="price"><?= $dest['precoDesconto'] ?></p>
+                    <p><del>R$<?= $dest['preco'] ?></del></p>
+                    <p id="price">R$<?= $dest['precoDesconto'] ?></p>
                 </div>
             <?php endforeach; ?>
             </div>
