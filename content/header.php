@@ -1,6 +1,12 @@
 <?php
-include_once("data/posts.php");
 include_once("data/url.php");
+
+$header = [
+    'home' => "index.php",
+    'sobre' => "#",
+    'cátalogo' => "catalogo.php",
+    'contato' => "#",
+];
 
 session_start();
 

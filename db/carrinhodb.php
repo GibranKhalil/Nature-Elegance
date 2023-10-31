@@ -31,8 +31,14 @@ $data = $_POST;
         }
         else if($data["type"] == "delete"){
             $id = $data["id"];
-            session_destroy();
-            header("Location: " . $BASE_URL . "../catalogo.php");
+                
+            foreach ($_SESSION["carrinho"] as $index => $produto){
+                if($produto["id"] == $id){
+                    unset($_SESSION["carrinho"][$index]);
+                    $_SESSION["msg"] = "Produto removido do carrinho com sucesso";
+                    header("Location: " . $BASE_URL . "../carrinho.php");
+                }
+            }
         }
     } else {
         $id;

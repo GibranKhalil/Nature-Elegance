@@ -1,6 +1,7 @@
 <?php
 include_once("content/header.php");
 
+
 if(isset($_SESSION["carrinho"])){
     $carrinho = $_SESSION["carrinho"];
 }
@@ -8,7 +9,8 @@ else{
     $carrinho = array();
 }
 ?>
-<div id="carrinho-container">
+<main id="pay-container">
+    <div id="carrinho-container">
     <div id="carrinho-title">
         <h1>Meu Carrinho</h1>
     </div>
@@ -28,7 +30,7 @@ else{
                             <p>R$<?= $produto["preco"] ?></p>
                         </div>
                         <div class="carrinho-actions">
-                            <form action="<?= $BASE_URL?>db/car.php" method="POST">
+                            <form action="<?= $BASE_URL?>db/carrinhodb.php" method="POST">
                             <input type="hidden" name="type" value="delete">
                             <input type="hidden" name="id" value="<?= $produto["id"]?>">
                             <button><i class="material-icons">cancel</i></button>
@@ -43,4 +45,8 @@ else{
             <p>Adicione produtos para vê-los aqui</p>
         <?php endif; ?>
     </div>
-</div>
+    </div>
+    <aside id="resumo-container">
+
+    </aside>
+</main>

@@ -1,5 +1,7 @@
 <?php
 include_once("content/header.php");
+include_once("db/catalogodb.php");
+include_once("db/categoriasdb.php");
 ?>
 <main id="catalogo-container">
     <aside id="sidebar-catalogo">
@@ -51,13 +53,13 @@ include_once("content/header.php");
         <?php foreach ($catalogo as $produto) : ?>
             <div class="cards">
                 <div class="desconto">
-                <a href="<?= $BASE_URL ?>produto.php?id=<?= $produto['id'] ?>"><img src="<?= $BASE_URL ?>/img/<?= $produto['img'] ?>"></a>
+                <a href="<?= $BASE_URL ?>produto.php?id=<?= $produto['id'] ?>"><img src="<?= $produto['img'] ?>"></a>
                     <p>-<?= $produto['desconto'] ?> OFF</p>
                 </div>
                 <div class="desc">
                 <h1><?= $produto['nome'] ?></h1>
                 <p><del>R$<?= $produto['preco'] ?></del></p>
-                <p id="price">R$<?= $produto['precoDesconto'] ?></p>
+                <p id="price">R$<?= $produto['preco'] ?></p>
                 </div>
                 
             </div>

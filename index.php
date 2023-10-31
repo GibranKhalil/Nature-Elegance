@@ -1,5 +1,6 @@
 <?php
 include_once("content/header.php");
+include_once("db/categoriasdb.php");
 ?>
 
 <main>
@@ -16,7 +17,7 @@ include_once("content/header.php");
                 <?php foreach ($categorias as $cat) : ?>
                     <div id="categorias--circle-container">
                         <div class="categorias-circle">
-                            <img src="<?= $BASE_URL ?>img/<?= $cat['img'] ?>">
+                            <img src="<?= $cat['img'] ?>">
                         </div>
                         <div class="categorias-cirlce-title">
                             <p><?= $cat['nome']; ?></p>
