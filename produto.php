@@ -58,9 +58,6 @@ if (isset($_GET['id'])) {
                 <form action="<?= $BASE_URL ?>db/car.php" method="POST">
                     <input type="hidden" name="type" value="add">
                     <input type="hidden" name="id" value="<?= $currentPost["id"]?>">
-                    <input type="hidden" name="img" value="<?= $BASE_URL ?>/img/<?= $currentPost['img'] ?>">
-                    <input type="hidden" name="nome" value="<?= $currentPost['nome'] ?>">
-                    <input type="hidden" name="preco" value="<?= $currentPost['precoDesconto'] ?>">
                     <button id="button-pay"><i class="material-icons">shopping_cart</i>Adicionar ao Carrinho</button>
                 </form>
                 <button id="button-heart"><i class="material-icons">favorite_border</i></button>

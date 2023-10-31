@@ -1,6 +1,12 @@
 <?php
 include_once("content/header.php");
-include_once("db/car.php");
+
+if(isset($_SESSION["carrinho"])){
+    $carrinho = $_SESSION["carrinho"];
+}
+else{
+    $carrinho = array();
+}
 ?>
 <div id="carrinho-container">
     <div id="carrinho-title">

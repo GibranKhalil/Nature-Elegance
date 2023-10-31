@@ -1,66 +1,43 @@
 <?php
+session_start();
 include("conexaodb.php");
-
-
 $data = $_POST;
 
     if (!empty($data)) {
         if ($data["type"] == "add") {
-            $img = $data["img"];
-            $nome = $data["nome"];
-            $preco = $data["preco"];
+            $id = $data["id"];
 
-            $query = "INSERT INTO carrinho(img,nome,preco) VALUES(:img, :nome, :preco)";
-
+            $query = "SELECT id, img, nome, preco FROM carrinho WHERE id = :id ";
             $stmt = $con->prepare($query);
+            $stmt->bindParam(":id", $id);
+            $stmt->execute();
 
-            $stmt->bindParam(":img", $img);
-            $stmt->bindParam(":nome", $nome);
-            $stmt->bindParam(":preco", $preco);
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            try {
-                $stmt->execute();
-                $_SESSION["msg"] = "Produto adicionado ao carrinho com sucesso";
+            var_dump($result);
+
+            if($result){
+                if (!isset($_SESSION["carrinho"])) {
+                    $_SESSION["carrinho"] = array();
+                }
+                $_SESSION["carrinho"][] = $result;
+                $_SESSION["msg"] = "Produto adicionado ao carrinho com sucesso"; 
                 header("Location: " . $BASE_URL . "../carrinho.php");
-            } catch (PDOException $e) {
-                $error = $e->getMessage();
-                echo "Erro:" . $error;
+            }    
+            else {
+                $_SESSION["msg"] = "Falha ao encontrar produto. Tente novamente";
+                header("Location: " . $BASE_URL . "../catalogo.php");
             }
         }
         else if($data["type"] == "delete"){
             $id = $data["id"];
-
-            $query = "DELETE FROM carrinho WHERE id = :id";
-
-            $stmt = $con->prepare($query);
-
-            $stmt->bindParam(":id", $id);
-
-            try {
-                $stmt->execute();
-                $_SESSION["msg"] = "Produto removido do carrinho com sucesso";
-                header("Location: " . $BASE_URL . "../carrinho.php");
-            } catch (PDOException $e) {
-                $error = $e->getMessage();
-                echo "Erro:" . $error;
-            }
+            session_destroy();
+            header("Location: " . $BASE_URL . "../catalogo.php");
         }
     } else {
         $id;
 
         if (!empty($_GET)) {
             $id = $_GET["id"];
-        }
-
-        if (empty($id)) {
-            $carrinho = [];
-
-            $query = "SELECT * FROM carrinho";
-
-            $stmt = $con->prepare($query);
-
-            $stmt->execute();
-
-            $carrinho = $stmt->fetchAll();
         }
     }
